@@ -1,5 +1,5 @@
 region="us-west-2"
-ami_id="ami-07f08bc2582b4b2c5"
+ami_id="ami-09ad895be50e308a1"
 instance_type="t2.micro"
 tags={
     Name        = "test",

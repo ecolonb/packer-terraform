@@ -38,9 +38,9 @@ resource "aws_instance" "demo_packer_instance" {
     connection {
       type = "ssh"
       user = "centos"
-      private_key = "${file(var.private_key)}"
+      private_key = file(var.private_key)
       host = self.public_ip
     }
-    inline = ["echo hello", "docker run -it -d -p 80:80 edgcol/nginx-test:v1"]
+    inline = ["echo hello despues falla pero ya funcionó","sudo systemctl start docker", "docker run -it -d -p 80:80 edgcol/nginx-test:v1"]
   }
 }
